@@ -25,6 +25,10 @@ header {
   box-shadow: 0 2px 4px 0 hsla(0, 0%, 47%, 0.7);
 }
 
+#main-navbar {
+  padding: 0;
+}
+
 .footer {
   position: absolute;
   bottom: 0;
@@ -33,45 +37,9 @@ header {
   border-top: 1px solid #d7d7d7;
 }
 
-.auth-form {
-  border: 1px solid #d7d7d7;
-  border-radius: 5px;
-  padding: 2rem 3rem;
-  -webkit-box-shadow: 0 10px 15px -5px rgba(119, 119, 119, 0.7);
-  -moz-box-shadow: 0 10px 15px -5px rgba(119, 119, 119, 0.7);
-  box-shadow: 0 10px 15px -5px rgba(119, 119, 119, 0.7);
-}
-
-.auth-form .is-danger::before {
-  content: '';
-  display: inline-block;
-  background: url('/static/images/IconError.svg') no-repeat;
-  width: 1rem;
-  height: 1rem;
-  margin: 0 0.3rem 0 0;
-  vertical-align: text-bottom;
-}
-
-.auth-form .is-success::before {
-  content: '';
-  display: inline-block;
-  background: url('/static/images/IconSuccess.svg') no-repeat;
-  width: 20px;
-  height: 20px;
-  margin: 0 0.3rem 0 0;
-  vertical-align: bottom;
-}
-
-.justify-center {
-  justify-content: center !important;
-}
-
-.display-none {
-  display: none !important;
-}
-
-.display-unset {
-  display: unset;
+.break-text {
+  word-wrap: break-word;
+  white-space: normal;
 }
 
 .mb-2 {
@@ -82,6 +50,56 @@ header {
   margin-top: 1rem;
 }
 
-.help {
-  font-size: 0.9rem;
+.mt-auto {
+  margin: auto;
+  text-align: center;
+}
+
+.no-recipes-text {
+  font-size: 6rem;
+}
+
+.card {
+  box-shadow: none;
+}
+
+.recipe-label {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 16rem;
+}
+
+.card:hover {
+  box-shadow: 0 0 0.5em 0.1em rgba(10, 10, 10, .1), 0 0 0.5rem 0.25rem rgba(10, 10, 10, .02);
+  cursor: pointer;
+}
+
+.card-content {
+  border: 1px solid #efefef;
+  border-top: none;
+}
+
+.recipe-labels {
+  display: flex;
+  flex-flow: row wrap;
+  justify-self: flex-start;
+  align-items: center;
+}
+
+.tag:not(body) {
+  margin: 0 0.25rem 0.25rem 0;
+}
+
+@media screen and (max-width: 768px) {
+  .recipe-cards>.is-full-mobile {
+    width: unset;
+    justify-self: center;
+    margin: auto;
+  }
+}
+
+.tags-label {
+  margin-bottom: 0.5rem;
+  margin-right: 0.5rem;
 }

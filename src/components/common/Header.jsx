@@ -1,9 +1,14 @@
 import React, {
-  Fragment
+  Fragment, useState
 } from 'react';
 import { Link } from 'react-router-dom';
 
 const Header = () => {
+  const [displayNavbarBurger, setNavbarBurgerDisplay] = useState(false);
+  const toggleNavbarBurger = (e) => {
+    e.preventDefault();
+    setNavbarBurgerDisplay(!displayNavbarBurger);
+  }
   return (
     <Fragment>
       <header>
@@ -13,11 +18,14 @@ const Header = () => {
               <img className={`header-logo`} src="#" alt="Logo" />
             </Link> 
             <Link to="/" className={`navbar-item`}>Home</Link>
-            <a role="button" className={`navbar-burger burger`} aria-label="menu" aria-expanded="false" data-target="main-navbar">
+            <a role="button" className={'navbar-burger burger ' + (displayNavbarBurger ? 'is-active' : '')} aria-label="menu" aria-expanded="false" data-target="main-navbar" onClick={toggleNavbarBurger}>
               <span aria-hidden="true"></span>
               <span aria-hidden="true"></span>
               <span aria-hidden="true"></span>
             </a>
+          </div>
+          <div id="main-navbar" className={'navbar-menu ' + (displayNavbarBurger ? 'is-active' : '')}>
+
           </div>
         </nav>
       </header>
