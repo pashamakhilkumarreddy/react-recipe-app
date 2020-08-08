@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import '../node_modules/bulma/css/bulma.min.css';
-import './index.css';
-import App from './App.jsx';
+import App from './App';
 import { BrowserRouter as Router } from 'react-router-dom';
 import * as serviceWorker from './serviceWorker';
+import './index.css';
 
 ReactDOM.render(
   <React.StrictMode>

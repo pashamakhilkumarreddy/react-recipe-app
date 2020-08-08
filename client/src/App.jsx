@@ -1,10 +1,9 @@
-import React, { Fragment, Component } from 'react';
+import React, { Component } from 'react';
 import Routes from './routes';
-import Header from './components/common/Header';
-import Footer from './components/common/Footer';
+import AppHeader from './components/common/Header';
+import AppFooter from './components/common/Footer';
 import Form from './components/Form';
 import Recipe from './components/Recipe';
-import './App.css';
 
 const EDAMAM_API_KEY = '816ab3e584b78b7feadb7f8990d423c7';
 
@@ -62,8 +61,8 @@ export default class App extends Component {
 
   render() {
     return (
-      <Fragment>
-        <Header />
+      <>
+        <AppHeader />
         <main className="container" style={{ paddingBottom: '8rem' }}>
           <Form getRecipe={this.getRecipe} />
           <div className="columns is-vcentered is-mobile mt-1 is-multiline recipe-cards">                         
@@ -83,8 +82,8 @@ export default class App extends Component {
             <Routes />
           </div>
         </main>
-        <Footer />
-      </Fragment>
+        <AppFooter />
+      </>
     )
   }
 }

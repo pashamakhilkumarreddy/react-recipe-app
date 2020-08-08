@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { useState } from 'react';
 
@@ -12,7 +12,7 @@ const Recipe = ({ recipe: recipeDetails }) => {
     setRecipeModalDisplay(!showRecipeModal);
   }
   return (
-    <Fragment>
+    <>
       <div className="card">
         <div className="card-image">
           <img src={image} className={`is-square`} style={{ width: '-webkit-fill-available' }} alt={label} />
@@ -39,7 +39,7 @@ const Recipe = ({ recipe: recipeDetails }) => {
         </div>
       </div>
       <RecipeModal recipe={recipeDetails} showModal={showRecipeModal} toggleRecipeModalDisplay={toggleRecipeModalDisplay} />
-    </Fragment>
+    </>
   )
 }
 

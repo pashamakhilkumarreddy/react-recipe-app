@@ -1,8 +1,7 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 
 const Form = ({getRecipe}) => {
   return (
-    <Fragment>
       <div className={`columns is-centered is-mobile mt-1`}>
         <div className={`column is-three-quarters-mobile is-two-thirds-tablet is-half-desktop is-half-widescreen is-half-fullhd`}>
           <form onSubmit={getRecipe}>
@@ -17,7 +16,6 @@ const Form = ({getRecipe}) => {
           </form>
         </div>
       </div>
-    </Fragment>
   )
 }
 
